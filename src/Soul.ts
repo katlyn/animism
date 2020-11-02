@@ -7,7 +7,9 @@ import { SoulError } from './errors'
 interface SoulOptions {
   /** The token to use. Defaults to the `DISCORD_TOKEN` environment variable. */
   token: string
-  /** [ClientOptions](https://abal.moe/Eris/docs/Client) to be passed to Eris. */
+  /**
+   * [ClientOptions](https://abal.moe/Eris/docs/Client) to be passed to Eris.
+   * */
   erisOptions: ClientOptions
 }
 
