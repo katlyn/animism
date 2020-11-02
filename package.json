@@ -31,7 +31,7 @@
     "build:docs": "typedoc",
     "build:source": "tsc",
     "lint": "eslint",
-    "test": "tap",
+    "test": "npm run build:source && tap",
     "prepare": "npm run build"
   },
   "files": ["dist/**/*"],
