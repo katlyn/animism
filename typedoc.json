@@ -1,0 +1,8 @@
+{
+  "name": "Animism",
+  "includeVersion": true,
+  "inputFiles": ["./src"],
+  "mode": "file",
+  "out": "docs",
+  "excludeExternals": true
+}
