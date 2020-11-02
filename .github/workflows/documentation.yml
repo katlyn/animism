@@ -9,29 +9,32 @@ jobs:
 name: Deploy to GitHub Pages
 on:
   push:	
-    branches:	
-      - main
+    branches:	[ main ]
 
 jobs:
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@master
-    
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-    - name: Build documentation
-      run: |
-        npm install
-        npm run build:docs
+      # Check out latest
+      - uses: actions/checkout@master
+      
+      # Set up Node.js
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
 
-    - name: Push to GH Pages
-      uses: s0/git-publish-subdir-action@develop
-      env:
-        REPO: self
-        BRANCH: gh-pages
-        FOLDER: docs
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # Build
+      - name: Build documentation
+        run: |
+          npm install
+          npm run build:docs
+
+      - name: Push to GH Pages
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: docs
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
