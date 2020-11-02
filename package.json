@@ -30,8 +30,11 @@
     "build": "npm run build:source && npm run build:docs",
     "build:docs": "typedoc",
     "build:source": "tsc",
-    "test": "tap"
+    "lint": "eslint",
+    "test": "tap",
+    "prepare": "npm run build"
   },
+  "files": ["dist/**/*"],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
