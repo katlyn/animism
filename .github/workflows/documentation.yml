@@ -1,14 +1,6 @@
 name: Deploy documentation to GitHub Pages
 on:
   push:	
-    branches:	
-      - master
-
-jobs:
-  deploy:
-name: Deploy to GitHub Pages
-on:
-  push:	
     branches:	[ main ]
 
 jobs:
