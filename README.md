@@ -40,5 +40,5 @@ Here's the rough outline of what's planned for now.
     - [ ] Post-execution - after command execution finishes
 
 ## Documentation
-Documentation is build automatically from the main brain and is published at
+Documentation is built automatically from the main brain and is published at
 [https://katlyn.dev/animism](https://katlyn.dev/animism).
